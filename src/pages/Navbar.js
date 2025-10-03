@@ -1,21 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Navbar = () => {
-  const links = [
-    { label: 'Home', href: '#' },
-    { label: 'About', href: '#' },
-    { label: 'Contact', href: '#', className: 'right' },
-  ];
+class Navbar extends Component {
+  render() {
+    return (
+      <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" class="right">Contact</a>
+      </div>
+    );
+  }
+}
 
-  return (
-    <div className="navbar">
-      {links.map(({ label, href, className }, idx) => (
-        <a key={idx} href={href} className={className || ''}>
-          {label}
-        </a>
-      ))}
-    </div>
-  );
-};
-
-export default Navbar;
+export default Navbar
